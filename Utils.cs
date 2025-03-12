@@ -19,9 +19,11 @@ namespace Lab2
         {
             binaryString = binaryString.Replace(" ", "");
 
-            if (binaryString.Length % 8 != 0)
+            int remainder = binaryString.Length % 8;
+            if (remainder != 0)
             {
-                throw new Exception("Неверный формат битовой строки.");
+                int padding = 8 - remainder;
+                binaryString = binaryString.PadRight(binaryString.Length + padding, '0');
             }
 
             int byteCount = binaryString.Length / 8;

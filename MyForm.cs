@@ -83,7 +83,7 @@ namespace Lab2
 
         private void txtbx_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != '0' && e.KeyChar != '1' && e.KeyChar != '\b')
+            if (e.KeyChar != '0' && e.KeyChar != '1' && e.KeyChar != ' ' && e.KeyChar != '\n' && e.KeyChar != '\b')
             {
                 e.Handled = true;
             }
